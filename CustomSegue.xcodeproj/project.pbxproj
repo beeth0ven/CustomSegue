@@ -16,6 +16,7 @@
 		45BF6C5A1D2E229100325681 /* CircularSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C591D2E229100325681 /* CircularSegue.swift */; };
 		45BF6C5C1D2E22A400325681 /* TransitioningAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */; };
 		45BF6C5E1D2E22C200325681 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C5D1D2E22C200325681 /* Helper.swift */; };
+		45BF6C771D2E51C500325681 /* CoverVerticalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		45BF6C591D2E229100325681 /* CircularSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSegue.swift; sourceTree = "<group>"; };
 		45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningAnimator.swift; sourceTree = "<group>"; };
 		45BF6C5D1D2E22C200325681 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverVerticalSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,7 @@
 		45BF6C431D2E223D00325681 /* CustomSegue */ = {
 			isa = PBXGroup;
 			children = (
-				45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */,
-				45BF6C571D2E228900325681 /* ModelSegue.swift */,
-				45BF6C591D2E229100325681 /* CircularSegue.swift */,
-				45BF6C5D1D2E22C200325681 /* Helper.swift */,
+				45BF6C751D2E511C00325681 /* Animator */,
 				45BF6C481D2E223D00325681 /* Main.storyboard */,
 				45BF6C461D2E223D00325681 /* ViewController.swift */,
 				45BF6C561D2E224900325681 /* Supporting Files */,
@@ -82,6 +81,18 @@
 				45BF6C501D2E223D00325681 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45BF6C751D2E511C00325681 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */,
+				45BF6C591D2E229100325681 /* CircularSegue.swift */,
+				45BF6C571D2E228900325681 /* ModelSegue.swift */,
+				45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */,
+				45BF6C5D1D2E22C200325681 /* Helper.swift */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BF6C771D2E51C500325681 /* CoverVerticalSegue.swift in Sources */,
 				45BF6C5A1D2E229100325681 /* CircularSegue.swift in Sources */,
 				45BF6C471D2E223D00325681 /* ViewController.swift in Sources */,
 				45BF6C451D2E223D00325681 /* AppDelegate.swift in Sources */,
@@ -312,6 +324,7 @@
 				45BF6C551D2E223D00325681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

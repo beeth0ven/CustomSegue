@@ -1,30 +1,25 @@
 //
-//  ModelSegue.swift
+//  CoverVerticalSegue.swift
 //  CustomSegue
 //
 //  Created by luojie on 16/7/7.
-//  Copyright © 2016年 Caroline Begbie. All rights reserved.
+//  Copyright © 2016年 LuoJie. All rights reserved.
 //
 
 import UIKit
 
-/**
- Custom Segue
- ### Usage Example: ###
- ```swift
- 
-class FadeSegue: ModelSegue {
+class CoverVerticalSegue: ModelSegue {
     
     override var presentAnimator: UIViewControllerAnimatedTransitioning? {
         return PresentAnimator()
     }
-
+    
     override var dismissAnimator: UIViewControllerAnimatedTransitioning? {
         return DismissAnimator()
     }
 }
 
-extension FadeSegue {
+extension CoverVerticalSegue {
     
     class PresentAnimator: TransitioningPresentAnimator {
         
@@ -36,13 +31,14 @@ extension FadeSegue {
             presentedView: UIView?,
             containerView: UIView?) {
             
+            presentedView?.frame.origin.y = presentedView!.frame.height
             containerView?.addSubview(presentedView!)
-            presentedView?.alpha = 0
             
             UIView.animateWithDuration(
                 duration,
-                animations: { 
-                    presentedView?.alpha = 1
+                animations: {
+                    presentedView?.frame.origin.y = 0
+                    presentingViewController?.view.alpha = 0.5
                 },
                 completion: { _ in
                     context.completeTransition(true)
@@ -53,7 +49,7 @@ extension FadeSegue {
     }
 }
 
-extension FadeSegue {
+extension CoverVerticalSegue {
     
     class DismissAnimator: TransitioningDismissAnimator {
         
@@ -65,12 +61,11 @@ extension FadeSegue {
             presentedView: UIView?,
             containerView: UIView?) {
             
-            _ = presentingView.flatMap { containerView?.insertSubview($0, atIndex: 0) }
-
             UIView.animateWithDuration(
                 duration,
                 animations: {
-                    presentedView?.alpha = 0
+                    presentedView?.frame.origin.y = presentedView!.frame.height
+                    presentingViewController?.view.alpha = 1
                 },
                 completion: { _ in
                     context.completeTransition(true)
@@ -79,31 +74,3 @@ extension FadeSegue {
         }
     }
 }
- ```
- */
-public class ModelSegue: UIStoryboardSegue {
-    override public func perform() {
-        destinationViewController.transitioningDelegate = self
-        super.perform()
-    }
-}
-
-extension ModelSegue: UIViewControllerTransitioningDelegate {
-    
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return presentAnimator
-    }
-    
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return dismissAnimator
-    }
-    
-    public var presentAnimator: UIViewControllerAnimatedTransitioning? {
-        return nil
-    }
-    
-    public var dismissAnimator: UIViewControllerAnimatedTransitioning? {
-        return nil
-    }
-}
-
