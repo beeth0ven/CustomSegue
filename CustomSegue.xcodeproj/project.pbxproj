@@ -17,6 +17,8 @@
 		45BF6C5C1D2E22A400325681 /* TransitioningAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */; };
 		45BF6C5E1D2E22C200325681 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C5D1D2E22C200325681 /* Helper.swift */; };
 		45BF6C771D2E51C500325681 /* CoverVerticalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */; };
+		45BF6C861D2F616C00325681 /* GravitySegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C851D2F616C00325681 /* GravitySegue.swift */; };
+		45BF6C881D2F6F9D00325681 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BF6C871D2F6F9D00325681 /* Queue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitioningAnimator.swift; sourceTree = "<group>"; };
 		45BF6C5D1D2E22C200325681 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverVerticalSegue.swift; sourceTree = "<group>"; };
+		45BF6C851D2F616C00325681 /* GravitySegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GravitySegue.swift; sourceTree = "<group>"; };
+		45BF6C871D2F6F9D00325681 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,11 +90,13 @@
 		45BF6C751D2E511C00325681 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
+				45BF6C851D2F616C00325681 /* GravitySegue.swift */,
 				45BF6C761D2E51C500325681 /* CoverVerticalSegue.swift */,
 				45BF6C591D2E229100325681 /* CircularSegue.swift */,
 				45BF6C571D2E228900325681 /* ModelSegue.swift */,
 				45BF6C5B1D2E22A400325681 /* TransitioningAnimator.swift */,
 				45BF6C5D1D2E22C200325681 /* Helper.swift */,
+				45BF6C871D2F6F9D00325681 /* Queue.swift */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -170,8 +176,10 @@
 				45BF6C5A1D2E229100325681 /* CircularSegue.swift in Sources */,
 				45BF6C471D2E223D00325681 /* ViewController.swift in Sources */,
 				45BF6C451D2E223D00325681 /* AppDelegate.swift in Sources */,
+				45BF6C861D2F616C00325681 /* GravitySegue.swift in Sources */,
 				45BF6C5C1D2E22A400325681 /* TransitioningAnimator.swift in Sources */,
 				45BF6C581D2E228900325681 /* ModelSegue.swift in Sources */,
+				45BF6C881D2F6F9D00325681 /* Queue.swift in Sources */,
 				45BF6C5E1D2E22C200325681 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

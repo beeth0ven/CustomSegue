@@ -24,7 +24,7 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" id="8gl-5L-TRs">
                                 <connections>
-                                    <segue destination="dS6-89-rKA" kind="presentation" customClass="CircularSegue" customModule="CustomSegue" id="wab-lt-zOk"/>
+                                    <segue destination="dS6-89-rKA" kind="presentation" customClass="GravitySegue" customModule="CustomSegue" id="wab-lt-zOk"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="OverFullScreen" id="AA3-nb-vcg">
